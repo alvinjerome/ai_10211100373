@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+scikit-learn
+sentence-transformers
+faiss-cpu
+openai
+python-dotenv
+pypdf
+requests
+tqdm

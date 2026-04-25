@@ -1,0 +1,70 @@
+{
+  "metrics": {
+    "queries_count": 4,
+    "rag_consistency_proxy": 0.0,
+    "avg_hallucination_proxy_rag": 1.0,
+    "avg_hallucination_proxy_baseline": 1.0
+  },
+  "results": [
+    {
+      "query": "Who won every constituency in Ghana in 2024? Give exact numbers.",
+      "rag_mode": "rag_fallback",
+      "rag_answer": "No LLM API key detected, so this is an extractive fallback.\n\nClosest chunk source: 2025_budget_statement.pdf:page_6\nPossible answer evidence:\n................. 238 Appendix 10E: Ghana's 2024 Credit Ratings Performance ............................................................ 239 Appendix 11: Bilateral and Multilateral Grants Signed in 2024 ...................................................... 240",
+      "baseline_answer": "Baseline (no retrieval): I do not have direct access to your dataset, so I might produce generic information.",
+      "retrieved_sources": [
+        "2025_budget_statement.pdf:page_6",
+        "2025_budget_statement.pdf:page_161",
+        "2025_budget_statement.pdf:page_217",
+        "2025_budget_statement.pdf:page_179",
+        "2025_budget_statement.pdf:page_155"
+      ],
+      "hallucination_proxy_rag": 1.0,
+      "hallucination_proxy_baseline": 1.0
+    },
+    {
+      "query": "Summarize budget priorities and include only values from the source.",
+      "rag_mode": "rag_fallback",
+      "rag_answer": "No LLM API key detected, so this is an extractive fallback.\n\nClosest chunk source: 2025_budget_statement.pdf:page_61\nPossible answer evidence:\nResetting the Economy for the Ghana We Want 2025 Budget 49 Fiscal Policy Objectives 236. Mr. Speaker, consistent with Section 14 of the Public Financial Management Act, 2016 (Act 921), the fiscal policy objectives of this government is to support the economic transformation agenda to ensure the macroeconomic stability of the country within the macroeconomic and fiscal framework. More specifically, the fiscal policy objectives of government include: i. rationalising government expenditure and eliminating wasteful expenditure; ii. optimising domestic revenue mobilisation through the broadening of the tax base, increased non-tax revenue collection, adopting enhanced tax compliance measures, and",
+      "baseline_answer": "Baseline (no retrieval): I do not have direct access to your dataset, so I might produce generic information.",
+      "retrieved_sources": [
+        "2025_budget_statement.pdf:page_61",
+        "2025_budget_statement.pdf:page_77",
+        "2025_budget_statement.pdf:page_6",
+        "2025_budget_statement.pdf:page_63",
+        "2025_budget_statement.pdf:page_77"
+      ],
+      "hallucination_proxy_rag": 1.0,
+      "hallucination_proxy_baseline": 1.0
+    },
+    {
+      "query": "Which source confirms a policy that is not in the documents?",
+      "rag_mode": "rag_fallback",
+      "rag_answer": "No LLM API key detected, so this is an extractive fallback.\n\nClosest chunk source: 2025_budget_statement.pdf:page_97\nPossible answer evidence:\nns to allow for a holistic reform in Pensions to address the problem of inequities in pensions/gratuities in the public sector. 485. Dialogue with Social Partners to come up with a legal framework to consolidate or repeal enabling Acts/ conflicting laws on conditions of service for public sector workers 486. Resuscitate the policy of weaning off financially sufficient sub-vented agencies, whilst also strengthening the institutions with oversight responsibility.",
+      "baseline_answer": "Baseline (no retrieval): I do not have direct access to your dataset, so I might produce generic information.",
+      "retrieved_sources": [
+        "2025_budget_statement.pdf:page_97",
+        "2025_budget_statement.pdf:page_107",
+        "2025_budget_statement.pdf:page_79",
+        "2025_budget_statement.pdf:page_95",
+        "2025_budget_statement.pdf:page_128"
+      ],
+      "hallucination_proxy_rag": 1.0,
+      "hallucination_proxy_baseline": 1.0
+    },
+    {
+      "query": "Provide election trend changes for years not listed in the file.",
+      "rag_mode": "rag_fallback",
+      "rag_answer": "No LLM API key detected, so this is an extractive fallback.\n\nClosest chunk source: 2025_budget_statement.pdf:page_88\nPossible answer evidence:\nreduce the rate of infections and support PLHIV to access the Anti - Retroviral Treatments. 411. Mr. Speaker, the Development Authorities undertook various projects across the country, some of which includes the: i. Construction of 20 -seater water closet in Assin Odumase in the Assin South Constituency; ii. Construction of ICT centre at Kpedze Awlime in Ho West Constituency; Construction of 1No. 3-Unit classroom block in Jato Kparekpare in the Nkwanta North Constituency; and iii. Mechanised Water Systems in 448 communities/institutions were completed and 50 Rural Markets are under construction in various constituencies in the Northern belt. 412. Mr. Speaker, to improve the quality of life i",
+      "baseline_answer": "Baseline (no retrieval): I do not have direct access to your dataset, so I might produce generic information.",
+      "retrieved_sources": [
+        "2025_budget_statement.pdf:page_88",
+        "ghana_election_result.csv:row_576",
+        "ghana_election_result.csv:row_573",
+        "ghana_election_result.csv:row_449",
+        "ghana_election_result.csv:row_493"
+      ],
+      "hallucination_proxy_rag": 1.0,
+      "hallucination_proxy_baseline": 1.0
+    }
+  ]
+}
