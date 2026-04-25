@@ -30,11 +30,20 @@ if not PROCESSED_DIR.exists():
 retriever = load_retriever()
 
 with st.sidebar:
+    st.header("API Access")
+    pasted_api_key = st.text_input("OpenAI API Key", type="password", placeholder="sk-...")
+    if pasted_api_key.strip():
+        os.environ["OPENAI_API_KEY"] = pasted_api_key.strip()
+        st.success("Using pasted API key for this session.")
+    elif os.getenv("OPENAI_API_KEY"):
+        st.caption("Using OPENAI_API_KEY from environment/.env")
+    else:
+        st.warning("No API key set. App will use extractive fallback mode.")
+
     st.header("Retrieval Settings")
     top_k = st.slider("Top-K Chunks", min_value=2, max_value=10, value=5, step=1)
     alpha = st.slider("Hybrid Weight (vector alpha)", min_value=0.1, max_value=0.9, value=0.65, step=0.05)
     model = st.text_input("OpenAI model", value=os.getenv("OPENAI_MODEL", "gpt-4o-mini"))
-    st.info("If OPENAI_API_KEY is missing, the app uses an extractive fallback answer.")
 
 query = st.text_area("Ask a question about the dataset", height=110, placeholder="Type your question...")
 
